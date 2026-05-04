@@ -1,0 +1,624 @@
+@import url("https://use.typekit.net/bst2tjx.css");
+
+/* Estilos para el módulo de carrusel con clases únicas */
+
+/* Contenedor del carrusel */
+.dicm-carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Contenedor de la imagen principal */
+.dicm-carousel-main-container {
+    position: relative;
+    margin-bottom: 2.5px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Slider principal */
+.dicm-carousel-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+/* Slide individual */
+.dicm-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    background: none;
+}
+
+/* Imágenes dentro del slide */
+.dicm-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 15%;
+}
+
+/* Botones de navegación */
+.dicm-carousel-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.dicm-carousel-nav-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1);
+}
+
+.dicm-carousel-nav-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.dicm-carousel-nav-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    transition: fill 0.3s;
+}
+
+.dicm-carousel-nav-button:hover svg {
+    fill: #000;
+}
+
+.dicm-carousel-prev {
+    left: 10px;
+}
+
+.dicm-carousel-next {
+    right: 10px;
+}
+
+/* Contenedor de miniaturas */
+.dicm-carousel-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+/* Estilo de miniaturas */
+.dicm-carousel-thumbnail {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    transform: scale(1);
+    flex-shrink: 0;
+}
+
+.dicm-carousel-thumbnail:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dicm-carousel-thumbnail.active {
+    opacity: 1;
+    border: 2px solid #837874;
+    transform: scale(1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 980px) {
+    .dicm-carousel-thumbnails {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .dicm-carousel-thumbnails::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dicm-carousel-thumbnail {
+        min-width: 85px;
+        width: 85px;
+        height: 85px;
+        flex-shrink: 0;
+    }
+
+    .dicm-carousel-main-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .dicm-carousel-thumbnail {
+        min-width: 75px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .dicm-carousel-main-container {
+        height: 380px;
+    }
+}
+
+.et-l--header ul {
+    list-style-type: none;
+    padding: 0px !important;
+    line-height: 0px !important;
+}
+
+
+
+/* Estilos base para botones duales */
+.dicm-dual-button-container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dicm-dual-button {
+    transition: all 0.2s ease;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0.3em 1em;
+    line-height: 1.7em;
+    border-style: solid;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dicm-dual-button:hover {
+    opacity: 0.85;
+}
+
+.dicm-dual-button .button-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dicm-dual-button .et-pb-icon {
+    font-size: 1.3em;
+    line-height: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.dicm-dual-button.icon-left .et-pb-icon {
+    margin-right: 0.3em;
+}
+
+.dicm-dual-button.icon-right .et-pb-icon {
+    margin-left: 0.3em;
+}
+
+/* Estilos específicos para Visual Builder */
+.et-fb .dicm-dual-button-container {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.et-fb .dicm-dual-button {
+    padding: 0.3em 1em !important;
+    line-height: 1.7em !important;
+    border-style: solid !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.et-fb .dicm-dual-button .button-text {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.et-fb .dicm-dual-button .et-pb-icon {
+    display: inline-block !important;
+    font-size: 1.3em !important;
+    line-height: 1em !important;
+    vertical-align: middle !important;
+}
+
+.et-fb .dicm-dual-button.icon-left .et-pb-icon {
+    margin-right: 0.3em !important;
+}
+
+.et-fb .dicm-dual-button.icon-right .et-pb-icon {
+    margin-left: 0.3em !important;
+}
+
+
+.dicm_enhanced_menu_0_tb_header .dicm-mobile-menu-trigger {
+    padding: 0 !important;
+    margin-top: 0px !important;
+}
+
+
+
+
+/* Asegurar que el contenedor tiene position: relative */
+.dicm-gallery.dicm-slider-layout {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Contenedor de navegación ocupando todo el slider */
+.dicm-gallery .slider-navigation {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* Estilos base para los botones de navegación */
+.dicm-gallery .slider-nav-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    pointer-events: auto !important;
+    z-index: 20 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* Posición específica para el botón anterior */
+.dicm-gallery .slider-nav-btn.slider-prev {
+    left: 10px !important;
+}
+
+/* Posición específica para el botón siguiente */
+.dicm-gallery .slider-nav-btn.slider-next {
+    right: 10px !important;
+}
+
+/* Asegurar que los iconos SVG se muestran correctamente */
+.dicm-gallery .slider-nav-btn svg {
+    display: block !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+
+/* Mejora para interfaces táctiles */
+@media (hover: none) {
+    .dicm-gallery .slider-nav-btn {
+        /* Hacer los botones más grandes en dispositivos táctiles */
+        padding: 10px !important;
+    }
+}
+
+/* Solución para el Visual Builder */
+.et-fb .dicm-gallery.dicm-slider-layout .slider-navigation {
+    /* Asegurar que los controles son visibles en el Visual Builder */
+    display: block !important;
+}
+
+
+/* Agregar estos estilos a tu archivo CSS principal */
+.dicm-gallery.dicm-slider-layout {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.dicm-slider-layout .slider-track {
+    display: flex;
+    align-items: center;
+}
+
+.dicm-slider-layout[data-auto-slide="on"] .slider-track {
+    animation-name: dicm_scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dicm_scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.dicm-social-container {
+    margin-left: 35px !important;
+}
+
+
+
+.dmg-prev svg,
+.dmg-next svg {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.dicm_image_gallery_0 .slider-navigation .slider-nav-btn svg {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+
+.now-playing-overlay {
+    font-family: "avenir-lt-pro", sans-serif !important;
+}
+
+
+
+.dicm-mobile-menu-items .menu-item-has-children.dicm-submenu-open>.sub-menu .menu-item:not(:last-child)::after {
+    margin-bottom: 4px;
+}
+
+
+/* Tablet and Mobile (980px and below) - Vertical block layout */
+@media screen and (max-width: 980px) {
+    .dicm-desktop-horizontal-layout .dicm-mobile-menu-items {
+        display: block !important;
+    }
+
+    .dicm-mobile-elements-container {
+        margin-top: 2rem;
+    }
+
+    .dicm-mobile-menu-items .menu-item-has-children>a {
+        justify-content: start !important;
+        gap: 0.5rem;
+    }
+
+    .dicm-mobile-menu-items .menu-item-has-children.dicm-submenu-open>.sub-menu .menu-item:not(:last-child)::after {
+        margin-bottom: 5px !important;
+        margin-inline: 1.5vw 1vw !important;
+    }
+
+    .dicm-desktop-horizontal-layout .dicm-mobile-menu-items li {
+        width: 100% !important;
+        flex: none !important;
+        min-width: auto !important;
+        max-width: none !important;
+    }
+
+    .dicm-desktop-horizontal-layout .dicm-mobile-menu-items a {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+    }
+
+    .dicm-submenu-open>.sub-menu .menu-item a {
+        font-size: 12px !important;
+    }
+
+    .dicm-mobile-menu-items .menu-item-has-children.dicm-submenu-open>.sub-menu {
+        position: relative !important;
+        flex-direction: row !important;
+    }
+
+    .dicm-mobile-elements-container {
+        margin-top: 2rem;
+    }
+}
+
+
+/* Tablet and Mobile (980px and below) - Vertical block layout */
+@media screen and (max-width: 768px) {
+    .dicm-mobile-menu-items .menu-item-has-children.dicm-submenu-open>.sub-menu .menu-item:not(:last-child)::after {
+        margin-bottom: 5px !important;
+        margin-inline: 2.5vw 1vw !important;
+    }
+}
+
+
+.dicm-mobile-menu-items .menu-item-has-children>a {
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+.dicm_multimedia_carousel_0 .video-title-external {
+    font-family: "avenir-lt-pro", sans-serif !important;
+}
+
+
+/* PREVENIR SCROLL EN EL BODY CUANDO EL MENÚ MÓVIL ESTÁ ABIERTO */
+body.dicm-mobile-menu-open {
+    overflow: hidden !important;
+}
+
+
+/* OPCIONAL: También prevenir en HTML por compatibilidad */
+body.dicm-mobile-menu-open html {
+    overflow: hidden !important;
+}
+
+
+.et-l--header ul {
+    align-items: center;
+}
+
+
+
+.time-display {
+    font-family: 'helvetica-neue-lt-pro', websafe !important;
+    font-weight: 400 !important;
+}
+
+
+
+
+
+.dicm_enhanced_menu_0_tb_header .dicm-logo-text p {
+    padding: 0 !important;
+}
+
+.dicm_enhanced_menu_0_tb_header .dicm-enhanced-menu-container {
+    gap: 4rem !important;
+}
+
+
+@media(max-width:550px) {
+    .dicm_audio_player_0 .title-subtitle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dicm_audio_player_0 .inline-container {
+        align-items: center !important;
+    }
+
+    .time-display,
+    .time-separator {
+        display: none;
+    }
+
+    .dicm_video_carousel_0 .overlay-title {
+        margin-bottom: 10px !important;
+    }
+
+    .dicm_video_carousel_0 .play-button-main {
+        padding: 12px 35px !important;
+    }
+
+}
+
+/* FULLSCREEN STYLES */
+.dicm-single-video-player:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #000 !important;
+}
+
+.dicm-single-video-player:fullscreen .single-video-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+}
+
+.dicm-single-video-player:fullscreen .dicm-video-element {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+.dicm-single-video-player:fullscreen iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.dicm-single-video-player:fullscreen .video-controls {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.dicm-single-video-player:fullscreen .dicm-main-play-button-overlay {
+    display: none !important;
+}
+
+
+.dicm-slider-item {
+    cursor: pointer;
+}
+
+.carousel-container .now-playing {
+    font-family: "avenir-lt-pro", sans-serif !important;
+    font-size: 14.5px !important;
+    letter-spacing: 1px;
+}
+
+.play-button-main,
+.carousel-container input[type=text] {
+    font-family: "avenir-lt-pro", sans-serif !important;
+    letter-spacing: 1px;
+}
+
+
+
+.share-modal-content {
+    font-family: "avenir-lt-pro", sans-serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+}
+
+
+.dicm-info-modal-content {
+    font-family: "avenir-lt-pro", sans-serif;
+}
+
+
+@media(max-width:768px) {
+    .dicm_video_carousel_0 .share-modal-overlay {
+        position: relative;
+        margin-top: -8rem;
+    }
+}
+
+
+.dicm-mobile-menu-trigger,
+.dicm-mobile-menu-trigger *,
+.dicm-mobile-close,
+.dicm-mobile-close *,
+.dicm-hamburger-icon,
+.dicm-mobile-menu-trigger .material-icons {
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+.dicm-mobile-menu-trigger:hover,
+.dicm-mobile-menu-trigger:active,
+.dicm-mobile-menu-trigger:focus,
+.dicm-mobile-close:hover,
+.dicm-mobile-close:active,
+.dicm-mobile-close:focus {
+    background: transparent !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.dicm-hamburger-icon:active,
+.dicm-hamburger-icon:focus,
+.material-icons:active,
+.material-icons:focus {
+    background: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* También aplicar a los enlaces del menú móvil si es necesario */
+.dicm-mobile-menu-items a,
+.dicm-mobile-menu-items a:active,
+.dicm-mobile-menu-items a:focus {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
